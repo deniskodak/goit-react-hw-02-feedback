@@ -1,5 +1,6 @@
 import React from "react";
 import { Section, H2 } from "./styled";
+import PropTypes from "prop-types";
 
 const SectionWithTitle = ({ title, children }) => (
   <Section>
@@ -7,5 +8,9 @@ const SectionWithTitle = ({ title, children }) => (
     {children}
   </Section>
 );
+
+SectionWithTitle.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default SectionWithTitle;

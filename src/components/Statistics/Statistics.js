@@ -1,5 +1,6 @@
 import React from "react";
 import { Ul, Li } from "./styled";
+import PropTypes from "prop-types";
 
 const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
   <Ul>
@@ -10,5 +11,13 @@ const Statistics = ({ good, neutral, bad, total, positivePercentage }) => (
     <Li>Positive feedback: {positivePercentage}% </Li>
   </Ul>
 );
+
+Statistics.propTypes = {
+  good: PropTypes.number.isRequired,
+  neutral: PropTypes.number.isRequired,
+  bad: PropTypes.number.isRequired,
+  total: PropTypes.number.isRequired,
+  positivePercentage: PropTypes.number.isRequired,
+};
 
 export default Statistics;
